@@ -272,10 +272,6 @@ a.link {
 
 }
 
-#last-link {
-    margin-bottom: 10px;
-}
-
 a.link.none {
     text-decoration: none;
     font-weight: 600;
