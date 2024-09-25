@@ -280,6 +280,10 @@ a.link.none {
 
 }
 
+a.link.none:hover {
+    background-color: rgba(161, 192, 243, 1);
+}
+
 a.link.crveni {
     color: var(--color-crvena);
 }
@@ -394,12 +398,17 @@ h2 {
 }
 
 h2.head {
-    background: var(--color-siva2);
-    border: 1px solid var(--color-siva2);
-    color: #fff;
+    background: transparent;
+    color: #444654;
     font-size: var(--h2-font-size);
     margin-bottom: var(--gap);
     padding: 0 10px;
+    text-align: center;
+}
+
+h2.head span {
+    color: #4285F4;
+
 }
 
 h2.head.crni {
@@ -521,7 +530,9 @@ div.container.stat {
 
 header {}
 
-footer {}
+footer {
+    background-color: #444654 !important;
+}
 
 nav {
     font-size: 1.5em;
@@ -585,17 +596,22 @@ header>div+div {
 }
 
 .language {
-    font-size: 1em !important;
+    font-size: 1.2em !important;
     color: white;
 }
 
 .login {
-    font-size: 1em !important;
+    font-size: 1.2em !important;
     color: white;
 }
 
 .form-input {
     color: white;
+}
+
+.form-input::placeholder {
+    color: #b1b1b1;
+    opacity: 1;
 }
 
 #mainNav {
@@ -633,6 +649,11 @@ header>div+div {
 #mainNav a:hover {
     text-decoration: underline;
     color: var(--color-blue);
+}
+
+.nav-link {
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
 }
 
 .flag {
@@ -765,16 +786,84 @@ aside nav h3 img.icon {
 }
 
 aside nav a:hover {
-    background-color: rgba(66, 133, 244, 0.35);
+    background-color: rgba(188, 211, 248, 0.35);
+    border-color: transparent !important;
 }
 
 
 /* MAIN */
 
+/* ricerca form */
+.search-card {
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.09);
+}
+
+.search-card-text {
+    font-weight: 700;
+    text-underline-offset: 5px;
+    color: rgba(68, 70, 84, 1);
+    text-decoration: underline;
+    text-decoration-color: rgba(66, 133, 244);
+}
+
+.form-input,
+.input-group-text {
+    background-color: rgba(188, 211, 248, 0.35);
+}
+
+.form-input:focus {
+    box-shadow: none;
+    outline: none;
+    background-color: rgba(188, 211, 248, 0.35);
+}
+
+.form-input:hover,
+.input-group-text:hover {
+    background-color: rgba(188, 211, 248, 0.35);
+}
+
 .card-middle {
     background-color: var(--color-blue);
     font-size: 1.2em;
 }
+
+.card-top-offer {
+    max-width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.09);
+    background-color: white;
+}
+
+.image-top-offer {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.inner-top-offer {
+    height: 100%;
+    max-height: 250px;
+}
+
+.button-top-offer {
+    font-weight: 800;
+    color: rgba(66, 133, 244);
+}
+
+.card-title {
+    font-size: 1.6em !important;
+    font-weight: 700;
+    color: #444654;
+
+}
+
+.card-text {
+    font-size: 1.3em !important;
+    font-weight: 300;
+    color: #444654;
+}
+
 
 #tabs>div {
     background: var(--color-siva);
