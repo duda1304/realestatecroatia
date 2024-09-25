@@ -842,8 +842,8 @@ aside nav a:hover {
 }
 
 .inner-top-offer {
-    height: 100%;
-    max-height: 250px;
+    /* height: 100%; */
+    max-height: 200px;
 }
 
 .button-top-offer {
