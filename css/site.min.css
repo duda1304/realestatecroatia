@@ -297,7 +297,6 @@ a.link.crveni:hover {
     color: #000;
 }
 
-a.btn_crveni,
 a.btn_bijeli,
 a.btn_sivi,
 a.btn_sivi2 {
@@ -311,9 +310,7 @@ a.btn_sivi2 {
     transition: all .5s;
 }
 
-a.btn_crveni:hover {
-    cursor: pointer;
-}
+
 
 a.btn_sivi {
     background: var(--color-siva);
@@ -844,6 +841,7 @@ aside nav a:hover {
 .inner-top-offer {
     /* height: 100%; */
     max-height: 200px;
+    overflow: hidden;
 }
 
 .button-top-offer {
@@ -1063,10 +1061,6 @@ ul.formaHolder input.submit {
     width: auto;
 }
 
-ul.formaHolder input.submit.btn_crveni {
-    background: var(--color-crvena);
-    border: 1px solid var(--color-crvena);
-}
 
 ul.formaHolder input.submit:hover {
     border: 1px solid #000;
@@ -1103,11 +1097,11 @@ ul.lokacije+p {
     margin: 20px 0 0 !important;
 }
 
-div.index_topPonuda_holder {
+/* div.index_topPonuda_holder {
     margin: var(--gap) 0 0 0;
-}
+} */
 
-div.index_topPonuda {
+/* div.index_topPonuda {
     display: grid;
     font-size: 1.2em;
     gap: calc(var(--gap) / 2);
@@ -1154,7 +1148,7 @@ div.index_topPonuda>a h3 {
 
 div.index_topPonuda>a p {
     line-height: 110%;
-}
+} */
 
 
 div.index_agencijeBlock_holder {
@@ -2216,7 +2210,6 @@ div.det_sub>div>div>p+p {
     margin: var(--gap) auto;
 }
 
-div.det_sub>div>div>a.btn_crveni,
 div.det_sub>div>div>a.btn_bijeli {
     display: block;
     margin: 0 auto;
