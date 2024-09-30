@@ -978,6 +978,7 @@ aside nav a:hover {
 .card-ultimi-button {
     background-color: rgba(66, 133, 244);
     font-size: 1.2em;
+    font-weight: 600;
 }
 
 #tabs>div {
