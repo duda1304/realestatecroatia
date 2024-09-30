@@ -277,6 +277,7 @@ a.link.none {
     text-decoration: none;
     font-weight: 600;
     color: rgb(255, 255, 255);
+    font-size: 1em;
 
 }
 
@@ -792,8 +793,10 @@ aside nav a:hover {
 
 /* ricerca form */
 .search-card {
-    border: 1px solid rgba(0, 0, 0, 0.02);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.09);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 10px;
 }
 
 .search-card-text {
@@ -835,16 +838,35 @@ aside nav a:hover {
     color: #444654;
 }
 
+.small-input {
+    width: 6em;
+}
+
+.uniform-select {
+    width: 19em;
+    max-width: 300px;
+}
+
+
+/* LINK CARDS MIDDLE */
+
+.card-links-middle {
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.09);
+}
+
+/* TOP OFFER */
+
 .card-middle {
     background-color: var(--color-blue);
     font-size: 1.2em;
 }
 
 .card-top-offer {
-    max-width: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.02);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.09);
-    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: #fff;
+    border: 0px;
 }
 
 .image-top-offer {
@@ -855,7 +877,7 @@ aside nav a:hover {
 
 .inner-top-offer {
     /* height: 100%; */
-    max-height: 200px;
+    max-height: 300px;
     overflow: hidden;
 }
 
@@ -872,10 +894,91 @@ aside nav a:hover {
 
 .card-text {
     font-size: 1.3em !important;
-    font-weight: 300;
+    font-weight: 200;
+    color: #444654;
+    line-height: 1.2;
+    ;
+}
+
+/* ULTIMI REGISTRATI */
+
+.card-ultimi {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: #fff;
+    border: 0px;
+}
+
+.inner-card-ultimi {
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.image-card-ultimi {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.title-ultimi {
+    font-weight: 700;
+    color: rgba(68, 70, 84, 1);
+    position: relative;
+}
+
+.title-ultimi::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 10%;
+    height: 2px;
+    background-color: rgba(66, 133, 244, 1);
+    text-underline-offset: 8px;
+}
+
+.card-ultimi-title {
+    font-size: 1.8em !important;
+    font-weight: 800;
     color: #444654;
 }
 
+.card-ultimi-price {
+    font-size: 1rem;
+    font-size: 1.8em !important;
+}
+
+.card-ultimi-price span {
+    color: rgba(66, 133, 244);
+    font-size: 1rem;
+}
+
+.card-ultimi-info {
+    font-size: 1.3em !important;
+    font-weight: 300;
+    line-height: normal;
+    color: #444654;
+}
+
+.card-ultimi-info img {
+    width: 13px;
+    height: 13px;
+}
+
+.card-ultimi-agency {
+    color: rgba(66, 133, 244);
+}
+
+.card-ultimi-text {
+    font-weight: 300;
+    line-height: normal;
+    font-size: 1.2em;
+}
+
+.card-ultimi-button {
+    background-color: rgba(66, 133, 244);
+    font-size: 1.2em;
+}
 
 #tabs>div {
     background: var(--color-siva);
@@ -1110,6 +1213,7 @@ ul.lokacije li.first_child {
 ul.lokacije+p {
     margin: 20px 0 0 !important;
 }
+
 
 /* div.index_topPonuda_holder {
     margin: var(--gap) 0 0 0;
