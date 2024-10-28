@@ -1,24 +1,17 @@
+import { useNavigate } from 'react-router-dom'
+
 export default function Aside(props) {
+    const navigate = useNavigate();
+
+    const handleNavigation = (path) => {
+        navigate(path); 
+    };
+
     return (
         <aside>
         <nav className="overflow-hidden rounded-3 pb-3">
             <h3 className="d-flex align-items-center">
-                <img src="./src/images/sidemenu1.png" alt="icon" className="icon me-2" />
-                Immobili
-            </h3>
-            <ul className="subMenu">
-                    <li>
-                        <a href="javascript:changeandselecttab(1);" className="link none">Ricerca base</a>
-                    </li>
-                    <li>
-                        <a href="javascript:changeandselecttab(2);" className="link none">Ricerca avanzata</a>
-                    </li>
-                    <li>
-                        <a href="javascript:changeandselecttab(4);" className="link none">Cerchiamo per Voi</a>
-                    </li>
-            </ul>
-            <h3 className="d-flex align-items-center">
-                <img src="./src/images/sidemenu2.png" alt="icon" className="icon me-2" />
+                <img src="./src/assets/icon/agencies.png" alt="icon" className="icon me-2" />
                 Agenzie
             </h3>
             <ul className="subMenu">
@@ -27,15 +20,15 @@ export default function Aside(props) {
                 </li>
             </ul>
             <h3 className="d-flex align-items-center">
-                <img src="./src/images/sidemenu3.png" alt="icon" className="icon me-2" />
+                <img src="./src/assets/icon/list.png" alt="icon" className="icon me-2" />
                 Elenchi
             </h3>
             <ul className="subMenu">
                 <li>
-                    <a href="/itl/list.asp?top=20" className="link none">Ultimi 20 registrati</a>
+                    <a className="link none" onClick={() => handleNavigation('/list?top=20')}>Ultimi 20 registrati</a>
                 </li>
                 <li>
-                    <a className="link none show-list" data-list="ultimi 100" onClick={(() => props.setFilter('100'))}>Ultimi 100 registrati</a>
+                    <a className="link none show-list" onClick={() => handleNavigation('/list?top=100')}>Ultimi 100 registrati</a>
                 </li>
                 <li>
                     <a href="/itl/listcity.asp" className="link none">Elenco per citt&#xE0;</a>
@@ -46,7 +39,7 @@ export default function Aside(props) {
             </ul>
 
             <h3 className="d-flex align-items-center">
-                <img src="./src/images/sidemenu4.png" alt="icon" className="icon me-2" />
+                <img src="./src/assets/icon/tag.png" alt="icon" className="icon me-2" />
                 Tag
             </h3>
             <ul className="subMenu">
@@ -79,7 +72,7 @@ export default function Aside(props) {
                 </li>
             </ul>
             <h3 className="d-flex align-items-center">
-                <img src="./src/images/sidemenu5.png" alt="icon" className="icon me-2" />
+                <img src="./src/assets/icon/users.png" alt="icon" className="icon me-2" />
                 Utenti
             </h3>
             <ul className="subMenu">
