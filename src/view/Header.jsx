@@ -3,8 +3,8 @@ export default function Header() {
         <header className="header">
             <div>
                 <div id="logo">
-                    <a href="/itl/">
-                        <img src="./src/images/REC_logo_novo.png" alt="RealEstateCroatia.com"></img>
+                    <a href="/">
+                        <img src="./src/assets/img/REC_logo_novo.png" alt="RealEstateCroatia.com"></img>
                     </a>
                 </div>
                 <div id="mainBan">
