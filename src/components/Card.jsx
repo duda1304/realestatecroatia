@@ -17,7 +17,7 @@ export default function Card(props) {
           <h5 className="card-ultimi-title mb-1">{props.city}<span className="fw-light"> ({props.region} ŽUPANIJA)</span></h5>
           <p className="card-ultimi-price mt-0 fw-bolder"><span className="fw-bolder">{formattedPrice}</span> €</p>
           {/* description */}
-          <p className="card-ultimi-text mb-2 mt-2">{props.description}</p>
+          <p className="card-ultimi-text mb-2 mt-2">{props.description ? (props.description.length > 150 ? props.description.slice(0, 150) + '...' : props.description) : ''}</p>
           {/* details with icons */}
           <div className="d-flex align-items-center card-ultimi-info mt-2 mb-1">
             <img src="./src/images/house_icon.png" alt="Apartment icon" className="me-2" />
