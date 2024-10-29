@@ -918,14 +918,13 @@ aside nav a:hover {
 }
 
 .card-ultimi-title {
-    font-size: 1.8em !important;
+    font-size: 1.6em !important;
     font-weight: 800;
     color: #444654;
 }
 
 .card-ultimi-price {
-    font-size: 1rem;
-    font-size: 1.8em !important;
+    font-size: 1em !important;
 }
 
 .card-ultimi-price span {
@@ -934,8 +933,8 @@ aside nav a:hover {
 }
 
 .card-ultimi-info {
-    font-size: 1.3em !important;
-    font-weight: 300;
+    font-size: 1.2em !important;
+    font-weight: 200;
     line-height: normal;
     color: #444654;
 }
@@ -950,8 +949,8 @@ aside nav a:hover {
 }
 
 .card-ultimi-text {
-    font-weight: 300;
-    line-height: normal;
+    font-weight: 200;
+    line-height: 1.5;
     font-size: 1.2em;
 }
 

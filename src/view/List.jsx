@@ -26,11 +26,11 @@ export default function List() {
 
 
     return (
-        <>
+        <main>
             <h2 className="h5 list-title mb-2">Elenco delle ultime 100 proprietà</h2>
             {data.map((element, index) => (
                 <Card key={element.id || index} {...element} />
             ))}
-        </>
+        </main>
     )
 }
