@@ -20,16 +20,16 @@ export default function Card(props) {
           <p className="card-ultimi-text mb-2 mt-2">{props.description ? (props.description.length > 150 ? props.description.slice(0, 150) + '...' : props.description) : ''}</p>
           {/* details with icons */}
           <div className="d-flex align-items-center card-ultimi-info mt-2 mb-1">
-            <img src="./src/images/house_icon.png" alt="Apartment icon" className="me-2" />
+            <img src="./src/assets/icon/property.png" alt="Apartment icon" className="me-2" />
             <p className="mb-0"> {props.title}</p>
           </div>
           <div className="d-flex align-items-center card-ultimi-info mb-1">
-            <img src="./src/images/person_icon.png" alt="Seller icon" className="me-2" />
+            <img src="./src/assets/icon/agency.png" alt="Seller icon" className="me-2" />
             <p className="mb-0 ">Venditore: <a href="https://www.trgostan.hr/en/hotels-and-villas/hvar-jelsa-vitarnja-three-room-villa-with-pool-wine-shop-and-terraces-60-m-from-the-sea-4714.html" className="text-decoration-underline">{props.agency}</a></p>
           </div>
 
           <div className="d-flex align-items-center mb-2 card-ultimi-info">
-            <img src="./src/images/fullcircle_icon.png" alt="ID icon" className="me-2" />
+            <img src="./src/assets/icon/dot.png" alt="ID icon" className="me-2" />
             <p className="mb-0">ID: <span className="fw-bold">{props.recId}</span></p>
           </div>
           <div className="d-flex justify-content-end mt-auto">
