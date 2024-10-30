@@ -25,10 +25,10 @@ export default function Aside(props) {
             </h3>
             <ul className="subMenu">
                 <li>
-                    <a className="link none" onClick={() => handleNavigation('/list?top=20')}>Ultimi 20 registrati</a>
+                    <a className="link none" onClick={() => handleNavigation('/top-20')}>Ultimi 20 registrati</a>
                 </li>
                 <li>
-                    <a className="link none show-list" onClick={() => handleNavigation('/list?top=100')}>Ultimi 100 registrati</a>
+                    <a className="link none show-list" onClick={() => handleNavigation('/top-100')}>Ultimi 100 registrati</a>
                 </li>
                 <li>
                     <a href="/itl/listcity.asp" className="link none">Elenco per citt&#xE0;</a>
@@ -44,31 +44,31 @@ export default function Aside(props) {
             </h3>
             <ul className="subMenu">
                 <li className="featuredtag">
-                    <a href="/itl/vendita-prima-fila-dal-mare" className="link none">Prima fila dal mare</a>
+                    <a onClick={() => handleNavigation('/vendita-prima-fila-dal-mare')} className="link none">Prima fila dal mare</a>
                 </li>
                 <li>
-                    <a href="/itl/vendita-nuove-costruzioni" className="link none">Case nuove</a>
+                    <a onClick={() => handleNavigation('/vendita-nuove-costruzioni')} className="link none">Case nuove</a>
                 </li>
                 <li>
-                    <a href="/itl/vendita-proprieta-vista-mare" className="link none">Propriet&#xE0; vista mare</a>
+                    <a onClick={() => handleNavigation('/vendita-proprieta-vista-mare')} className="link none">Propriet&#xE0; vista mare</a>
                 </li>
                 <li>
-                    <a href="/itl/vendita-casa-di-pietra" className="link none">Case di pietra</a>
+                    <a onClick={() => handleNavigation('/vendita-casa-di-pietra')} className="link none">Case di pietra</a>
                 </li>
                 <li>
-                    <a href="/itl/vendita-appartamenti" className="link none">Appartamenti</a>
+                    <a onClick={() => handleNavigation('/vendita-appartamenti')} className="link none">Appartamenti</a>
                 </li>
                 <li>
-                    <a href="/itl/vendita-proprieta-di-lusso" className="link none">Propriet&#xE0; di lusso</a>
+                    <a onClick={() => handleNavigation('/vendita-proprieta-di-lusso')} className="link none">Propriet&#xE0; di lusso</a>
                 </li>
                 <li>
-                    <a href="/itl/houses.asp" className="link none">Case</a>
+                    <a onClick={() => handleNavigation('/vendita-case')} className="link none">Case</a>
                 </li>
                 <li>
-                    <a href="/itl/private.asp" className="link none">Vendita diretta dal proprietario</a>
+                    <a onClick={() => handleNavigation('/vendita-diretta-dal-proprietario')} className="link none">Vendita diretta dal proprietario</a>
                 </li>
                 <li>
-                    <a href="/itl/vendita-albergo" className="link none">Albergi</a>
+                    <a onClick={() => handleNavigation('/vendita-albergo')} className="link none">Albergi</a>
                 </li>
             </ul>
             <h3 className="d-flex align-items-center">

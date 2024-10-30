@@ -21,7 +21,18 @@ function App() {
         <Aside />
         <Routes>
           <Route path="/" element={<Homepage/>} />
-          <Route path="/list" element={<List />} />
+          <Route path="/top-100" element={<List count={100}/>} />
+          <Route path="/top-20" element={<List count={20}/>} />
+          <Route path="/vendita-prima-fila-dal-mare" element={<List parameter={'tagList'} value={10}/>} />
+          <Route path="/vendita-nuove-costruzioni" element={<List parameter={'tagList'} value={11}/>} />
+          <Route path="/vendita-proprieta-vista-mare" element={<List parameter={'tagList'} value={22}/>} />
+          <Route path="/vendita-casa-di-pietra" element={<List parameter={'tagList'} value={17}/>} />
+          <Route path="/vendita-appartamenti" element={<List parameter={'propertyTypeId'} value={2}/>} />
+          <Route path="/vendita-proprieta-di-lusso" element={<List parameter={'tagList'} value={20}/>} />
+          <Route path="/vendita-case" element={<List parameter={'propertyTypeId'} value={1}/>} />
+          {/* CHECK THIS how to get non agency properties */}
+          <Route path="/vendita-diretta-dal-proprietario" element={<List parameter={'propertyTypeId'} value={2}/>} /> 
+          <Route path="/vendita-albergo" element={<List parameter={'tagList'} value={1}/>} />
         </Routes>
         <RightSideBanners />
       </div>
