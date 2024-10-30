@@ -13,14 +13,14 @@ function App() {
   // const [tagList, setTagList] = useState([]);
   // const [propertyTypeId, setPropertyTypeId] = useState(null);
   // const [lastItemsCount, setLastItemsCount] = useState(null);
-  
+
   return (
     <Router>
       <div className="container">
         <Header />
         <Aside />
         <Routes>
-          <Route path="/" element={<Homepage/>} />
+          <Route path="/" element={<Homepage />} />
           <Route path="/list" element={<List />} />
         </Routes>
         <RightSideBanners />
