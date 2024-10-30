@@ -9,7 +9,7 @@ export default function Aside(props) {
 
     return (
         <aside>
-        <nav className="overflow-hidden rounded-3 pb-3">
+        <nav className="overflow-hidden rounded-3">
             <h3 className="d-flex align-items-center">
                 <img src="./src/assets/icon/agencies.png" alt="icon" className="icon me-2" />
                 Agenzie
