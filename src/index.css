@@ -107,3 +107,7 @@ button:focus-visible {
 }
 
 
+.link {
+  cursor: pointer;
+}
+
