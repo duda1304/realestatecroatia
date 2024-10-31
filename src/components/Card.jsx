@@ -1,10 +1,10 @@
 export default function Card(props) {
 
   const propertyTypeMap = {
-    1: 'Kuća',
-    2: 'Stan',
-    3: 'Zemljište',
-    4: 'Poslovni prostor'
+    1: 'Casa',
+    2: 'Appartamento',
+    3: 'Terreno',
+    4: 'Attività commerciale'
   };
 
   const propertyType = propertyTypeMap[props.propertyTypeId] || 'Nepoznato';
