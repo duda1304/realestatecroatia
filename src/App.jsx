@@ -13,31 +13,31 @@ function App() {
   // const [tagList, setTagList] = useState([]);
   // const [propertyTypeId, setPropertyTypeId] = useState(null);
   // const [lastItemsCount, setLastItemsCount] = useState(null);
-  
+
   return (
     <Router>
       <div className="container">
         <Header />
         <Aside />
         <Routes>
-          <Route exact path="/" element={<Homepage/>} />
-          <Route path="/top-100" element={<List count={100} title='Elenco delle ultime 100 proprietà'/>} />
-          <Route path="/top-20" element={<List count={20} title='Elenco delle ultime 20 proprietà'/>} />
-          <Route path="/vendita-prima-fila-dal-mare" element={<List parameter={'tagList'} value={10} title='Prima fina dal mare'/>} />
-          <Route path="/vendita-nuove-costruzioni" element={<List parameter={'tagList'} value={11} title='Nuove costruzioni'/>} />
-          <Route path="/vendita-proprieta-vista-mare" element={<List parameter={'tagList'} value={22} title='Proprieta vista mare'/>} />
-          <Route path="/vendita-casa-di-pietra" element={<List parameter={'tagList'} value={17} title='Casa di pietra'/>} />
-          <Route path="/vendita-appartamenti" element={<List parameter={'propertyTypeId'} value={2} title='Appartamenti'/>} />
-          <Route path="/vendita-proprieta-di-lusso" element={<List parameter={'tagList'} value={20} title='Proprieta di lusso'/>} />
-          <Route path="/vendita-case" element={<List parameter={'propertyTypeId'} value={1} title='Case'/>} />
+          <Route exact path="/" element={<Homepage />} />
+          <Route path="/top-100" element={<List count={100} title='Elenco delle ultime 100 proprietà' />} />
+          <Route path="/top-20" element={<List count={20} title='Elenco delle ultime 20 proprietà' />} />
+          <Route path="/vendita-prima-fila-dal-mare" element={<List parameter={'tagList'} value={10} title='Prima fina dal mare' />} />
+          <Route path="/vendita-nuove-costruzioni" element={<List parameter={'tagList'} value={11} title='Nuove costruzioni' />} />
+          <Route path="/vendita-proprieta-vista-mare" element={<List parameter={'tagList'} value={22} title='Proprieta vista mare' />} />
+          <Route path="/vendita-casa-di-pietra" element={<List parameter={'tagList'} value={17} title='Casa di pietra' />} />
+          <Route path="/vendita-appartamenti" element={<List parameter={'propertyTypeId'} value={2} title='Appartamenti' />} />
+          <Route path="/vendita-proprieta-di-lusso" element={<List parameter={'tagList'} value={20} title='Proprieta di lusso' />} />
+          <Route path="/vendita-case" element={<List parameter={'propertyTypeId'} value={1} title='Case' />} />
           {/* CHECK THIS how to get non agency properties */}
-          <Route path="/vendita-diretta-dal-proprietario" element={<List parameter={'propertyTypeId'} value={2} title='Diretta dal proprietario'/>} /> 
-          <Route path="/vendita-albergo" element={<List parameter={'tagList'} value={1} title='Albergi'/>} />
+          <Route path="/vendita-diretta-dal-proprietario" element={<List parameter={'propertyTypeId'} value={2} title='Diretta dal proprietario' />} />
+          <Route path="/vendita-albergo" element={<List parameter={'tagList'} value={1} title='Albergi' />} />
 
-          <Route path="/vendita-con-piscina" element={<List parameter={'tagList'} value={21} title='Con piscina'/>} />
+          <Route path="/vendita-con-piscina" element={<List parameter={'tagList'} value={21} title='Con piscina' />} />
 
           <Route path="/*" element={<h1 className='mt-5 text-center fs-5'>Under construction</h1>} />
-         
+
         </Routes>
         <RightSideBanners />
       </div>
