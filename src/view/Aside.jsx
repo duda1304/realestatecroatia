@@ -9,14 +9,14 @@ export default function Aside(props) {
 
     return (
         <aside>
-        <nav className="overflow-hidden rounded-3 pb-3">
+        <nav className="overflow-hidden rounded-3">
             <h3 className="d-flex align-items-center">
                 <img src="./src/assets/icon/agencies.png" alt="icon" className="icon me-2" />
                 Agenzie
             </h3>
             <ul className="subMenu">
                 <li>
-                    <a href="/itl/listag.asp" className="link none">Elenco agenzie</a>
+                    <a href="/listag" className="link none">Elenco agenzie</a>
                 </li>
             </ul>
             <h3 className="d-flex align-items-center">
@@ -25,16 +25,16 @@ export default function Aside(props) {
             </h3>
             <ul className="subMenu">
                 <li>
-                    <a className="link none" onClick={() => handleNavigation('/list?top=20')}>Ultimi 20 registrati</a>
+                    <a className="link none" onClick={() => handleNavigation('/top-20')}>Ultimi 20 registrati</a>
                 </li>
                 <li>
-                    <a className="link none show-list" onClick={() => handleNavigation('/list?top=100')}>Ultimi 100 registrati</a>
+                    <a className="link none show-list" onClick={() => handleNavigation('/top-100')}>Ultimi 100 registrati</a>
                 </li>
                 <li>
-                    <a href="/itl/listcity.asp" className="link none">Elenco per citt&#xE0;</a>
+                    <a href="/listcity" className="link none">Elenco per citt&#xE0;</a>
                 </li>
                 <li>
-                    <a href="/itl/listzup.asp" className="link none">Elenco per regione</a>
+                    <a href="/listzup" className="link none">Elenco per regione</a>
                 </li>
             </ul>
 
@@ -44,31 +44,31 @@ export default function Aside(props) {
             </h3>
             <ul className="subMenu">
                 <li className="featuredtag">
-                    <a href="/itl/vendita-prima-fila-dal-mare" className="link none">Prima fila dal mare</a>
+                    <a onClick={() => handleNavigation('/vendita-prima-fila-dal-mare')} className="link none">Prima fila dal mare</a>
                 </li>
                 <li>
-                    <a href="/itl/vendita-nuove-costruzioni" className="link none">Case nuove</a>
+                    <a onClick={() => handleNavigation('/vendita-nuove-costruzioni')} className="link none">Case nuove</a>
                 </li>
                 <li>
-                    <a href="/itl/vendita-proprieta-vista-mare" className="link none">Propriet&#xE0; vista mare</a>
+                    <a onClick={() => handleNavigation('/vendita-proprieta-vista-mare')} className="link none">Propriet&#xE0; vista mare</a>
                 </li>
                 <li>
-                    <a href="/itl/vendita-casa-di-pietra" className="link none">Case di pietra</a>
+                    <a onClick={() => handleNavigation('/vendita-casa-di-pietra')} className="link none">Case di pietra</a>
                 </li>
                 <li>
-                    <a href="/itl/vendita-appartamenti" className="link none">Appartamenti</a>
+                    <a onClick={() => handleNavigation('/vendita-appartamenti')} className="link none">Appartamenti</a>
                 </li>
                 <li>
-                    <a href="/itl/vendita-proprieta-di-lusso" className="link none">Propriet&#xE0; di lusso</a>
+                    <a onClick={() => handleNavigation('/vendita-proprieta-di-lusso')} className="link none">Propriet&#xE0; di lusso</a>
                 </li>
                 <li>
-                    <a href="/itl/houses.asp" className="link none">Case</a>
+                    <a onClick={() => handleNavigation('/vendita-case')} className="link none">Case</a>
                 </li>
                 <li>
-                    <a href="/itl/private.asp" className="link none">Vendita diretta dal proprietario</a>
+                    <a onClick={() => handleNavigation('/vendita-diretta-dal-proprietario')} className="link none">Vendita diretta dal proprietario</a>
                 </li>
                 <li>
-                    <a href="/itl/vendita-albergo" className="link none">Albergi</a>
+                    <a onClick={() => handleNavigation('/vendita-albergo')} className="link none">Albergi</a>
                 </li>
             </ul>
             <h3 className="d-flex align-items-center">
@@ -77,111 +77,111 @@ export default function Aside(props) {
             </h3>
             <ul className="subMenu">
                 <li>
-                    <a href="https://www.realestatecroatia.com/agentor/registracija.asp?tip=1" className="link none"> Registrazione - Agenzie</a>
+                    <a href="https://agentor2.realestatecroatia.com/account/register?tip=1" className="link none"> Registrazione - Agenzie</a>
                 </li>
                 <li>
-                    <a href="https://www.realestatecroatia.com/agentor/registracija.asp?tip=2" className="link none"> Registrazione - Privata</a>
+                    <a href="https://agentor2.realestatecroatia.com/account/register?tip=2" className="link none"> Registrazione - Privata</a>
                 </li>
                 <li>
-                    <a href="https://agentor2.realestatecroatia.com" className="link none"> Accesso</a>
+                    <a href="https://agentor2.realestatecroatia.com/" className="link none"> Accesso</a>
                 </li>
                 <li>
-                    <a href="/itl/paketi.asp" className="link none">Pubblicit&#xE0;</a>
+                    <a href="/paketi" className="link none">Pubblicit&#xE0;</a>
                 </li>
             </ul>
             <ul className="abeceda">
                 <li>
-                    <a href="/itl/listcity.asp?slovo=a" className="link none">A</a>
+                    <a href="/listcity?slovo=a" className="link none">A</a>
                 </li>
                 <li>
-                    <a href="/itl/listcity.asp?slovo=b" className="link none">B</a>
+                    <a href="/listcity?slovo=b" className="link none">B</a>
                 </li>
                 <li>
-                    <a href="/itl/listcity.asp?slovo=c" className="link none">C</a>
+                    <a href="/listcity?slovo=c" className="link none">C</a>
                 </li>
                 <li>
-                    <a href="/itl/listcity.asp?slovo=č" className="link none">Č</a>
+                    <a href="/listcity?slovo=č" className="link none">Č</a>
                 </li>
                 <li>
-                    <a href="/itl/listcity.asp?slovo=ć" className="link none">Ć</a>
+                    <a href="/listcity?slovo=ć" className="link none">Ć</a>
                 </li>
                 <li>
-                    <a href="/itl/listcity.asp?slovo=d" className="link none">D</a>
+                    <a href="/listcity?slovo=d" className="link none">D</a>
                 </li>
                 <li>
-                    <a href="/itl/listcity.asp?slovo=dž" className="link none">Dž</a>
+                    <a href="/listcity?slovo=dž" className="link none">Dž</a>
                 </li>
                 <li>
-                    <a href="/itl/listcity.asp?slovo=đ" className="link none">Đ</a>
+                    <a href="/listcity?slovo=đ" className="link none">Đ</a>
                 </li>
                 <li>
-                    <a href="/itl/listcity.asp?slovo=e" className="link none">E</a>
+                    <a href="/listcity?slovo=e" className="link none">E</a>
                 </li>
                 <li>
-                    <a href="/itl/listcity.asp?slovo=f" className="link none">F</a>
+                    <a href="/listcity?slovo=f" className="link none">F</a>
                 </li>
                 <li>
-                    <a href="/itl/listcity.asp?slovo=g" className="link none">G</a>
+                    <a href="/listcity?slovo=g" className="link none">G</a>
                 </li>
                 <li>
-                    <a href="/itl/listcity.asp?slovo=h" className="link none">H</a>
+                    <a href="/listcity?slovo=h" className="link none">H</a>
                 </li>
                 <li>
-                    <a href="/itl/listcity.asp?slovo=i" className="link none">I</a>
+                    <a href="/listcity?slovo=i" className="link none">I</a>
                 </li>
                 <li>
-                    <a href="/itl/listcity.asp?slovo=j" className="link none">J</a>
+                    <a href="/listcity?slovo=j" className="link none">J</a>
                 </li>
                 <li>
-                    <a href="/itl/listcity.asp?slovo=k" className="link none">K</a>
+                    <a href="/listcity?slovo=k" className="link none">K</a>
                 </li>
                 <li>
-                    <a href="/itl/listcity.asp?slovo=l" className="link none">L</a>
+                    <a href="/listcity?slovo=l" className="link none">L</a>
                 </li>
                 <li>
-                    <a href="/itl/listcity.asp?slovo=lj" className="link none">LJ</a>
+                    <a href="/listcity?slovo=lj" className="link none">LJ</a>
                 </li>
                 <li>
-                    <a href="/itl/listcity.asp?slovo=m" className="link none">M</a>
+                    <a href="/listcity?slovo=m" className="link none">M</a>
                 </li>
                 <li>
-                    <a href="/itl/listcity.asp?slovo=n" className="link none">N</a>
+                    <a href="/listcity?slovo=n" className="link none">N</a>
                 </li>
                 <li>
-                    <a href="/itl/listcity.asp?slovo=nj" className="link none">NJ</a>
+                    <a href="/listcity?slovo=nj" className="link none">NJ</a>
                 </li>
                 <li>
-                    <a href="/itl/listcity.asp?slovo=o" className="link none">O</a>
+                    <a href="/listcity?slovo=o" className="link none">O</a>
                 </li>
                 <li>
-                    <a href="/itl/listcity.asp?slovo=p" className="link none">P</a>
+                    <a href="/listcity?slovo=p" className="link none">P</a>
                 </li>
                 <li>
-                    <a href="/itl/listcity.asp?slovo=r" className="link none">R</a>
+                    <a href="/listcity?slovo=r" className="link none">R</a>
                 </li>
                 <li>
-                    <a href="/itl/listcity.asp?slovo=s" className="link none">S</a>
+                    <a href="/listcity?slovo=s" className="link none">S</a>
                 </li>
                 <li>
-                    <a href="/itl/listcity.asp?slovo=š" className="link none">Š</a>
+                    <a href="/listcity?slovo=š" className="link none">Š</a>
                 </li>
                 <li>
-                    <a href="/itl/listcity.asp?slovo=t" className="link none">T</a>
+                    <a href="/listcity?slovo=t" className="link none">T</a>
                 </li>
                 <li>
-                    <a href="/itl/listcity.asp?slovo=u" className="link none">U</a>
+                    <a href="/listcity?slovo=u" className="link none">U</a>
                 </li>
                 <li>
-                    <a href="/itl/listcity.asp?slovo=v" className="link none">V</a>
+                    <a href="/listcity?slovo=v" className="link none">V</a>
                 </li>
                 <li>
-                    <a href="/itl/listcity.asp?slovo=z" className="link none">Z</a>
+                    <a href="/listcity?slovo=z" className="link none">Z</a>
                 </li>
                 <li>
-                    <a href="/itl/listcity.asp?slovo=ž" className="link none">Ž</a>
+                    <a href="/listcity?slovo=ž" className="link none">Ž</a>
                 </li>
                 <li>
-                    <a href="/itl/listcity.asp" className="link none">A-Ž</a>
+                    <a href="/listcity" className="link none">A-Ž</a>
                 </li>
             </ul>
         </nav>
@@ -196,13 +196,13 @@ export default function Aside(props) {
                 <a href="https://dux-immobiliare.it/" target="_blank"><img src="https://www.realestatecroatia.com/recbanners/20221013_VKPCRBVSWT.png" alt="Dux Real Estate" className="w-100 rounded-3 border-0" /></a>
             </div>
             <div className="subAd pt-10">
-                <a href="https://www.realestatecroatia.com/itl/vendita-prima-fila-dal-mare" target="_blank"><img src="https://www.realestatecroatia.com/recbanners/20231202_YMYJVCIVCC.jpg" alt="1. row to the sea" className="w-100 rounded-3 border-0" /></a>
+                <a href="https://www.realestatecroatia.com/vendita-prima-fila-dal-mare" target="_blank"><img src="https://www.realestatecroatia.com/recbanners/20231202_YMYJVCIVCC.jpg" alt="1. row to the sea" className="w-100 rounded-3 border-0" /></a>
             </div>
             <div className="subAd pt-10">
-                <a href="https://www.realestatecroatia.com/hrv/default.asp?st=4" target="_blank"><img src="https://www.realestatecroatia.com/recbanners/20231202_TXDHNINGSH.jpg" alt="We search for you" className="w-100 rounded-3 border-0" /></a>
+                <a href="https://www.realestatecroatia.com/hrv/default?st=4" target="_blank"><img src="https://www.realestatecroatia.com/recbanners/20231202_TXDHNINGSH.jpg" alt="We search for you" className="w-100 rounded-3 border-0" /></a>
             </div>
             <div className="subAd pt-10">
-                <a href="https://www.realestatecroatia.com/itl/vendita-proprieta-di-lusso" target="_blank"><img src="https://www.realestatecroatia.com/recbanners/20231209_DBQWNKXEAT.jpg" alt="Proprieta di lusso" className="w-100 rounded-3 border-0" /></a>
+                <a href="https://www.realestatecroatia.com/vendita-proprieta-di-lusso" target="_blank"><img src="https://www.realestatecroatia.com/recbanners/20231209_DBQWNKXEAT.jpg" alt="Proprieta di lusso" className="w-100 rounded-3 border-0" /></a>
             </div>
         </div>
     </aside>

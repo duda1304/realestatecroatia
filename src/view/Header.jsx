@@ -29,12 +29,12 @@ export default function Header() {
             <div className="main-navigation d-flex justify-content-between rounded-2">
                 <nav id="mainNav" className="mt-2">
                     <ul>
-                            <li><a href="/itl">Immobili</a></li>
-                            <li><a href="/itl/vendita-nuove-costruzioni">Progetti</a></li>
-                            <li><a href="/itl/vendita-prima-fila-dal-mare">Prima fila dal mare</a></li>
-                            <li><a href="/itl/vendita-proprieta-di-lusso">Propriet&#xE0; di lusso</a></li>
-                            <li><a href="/itl/vendita-con-piscina">Ville</a></li>
-                            <li><a href="/itl/statistika.asp">Statistiche</a></li>
+                            <li><a href="/">Immobili</a></li>
+                            <li><a href="/vendita-nuove-costruzioni">Progetti</a></li>
+                            <li><a href="/vendita-prima-fila-dal-mare">Prima fila dal mare</a></li>
+                            <li><a href="/vendita-proprieta-di-lusso">Propriet&#xE0; di lusso</a></li>
+                            <li><a href="/vendita-con-piscina">Ville</a></li>
+                            <li><a href="/statistika.asp">Statistiche</a></li>
                     </ul>
                 </nav>
                 <div className="d-flex align-items-center">
@@ -53,97 +53,97 @@ export default function Header() {
             <div className="abcd_holder">
                 <ul className="abeceda">
                     <li>
-                        <a href="/itl/listcity.asp?slovo=a" className="link abcd">A</a>
+                        <a href="/listcity.asp?slovo=a" className="link abcd">A</a>
                     </li>
                     <li>
-                        <a href="/itl/listcity.asp?slovo=b" className="link abcd">B</a>
+                        <a href="/listcity.asp?slovo=b" className="link abcd">B</a>
                     </li>
                     <li>
-                        <a href="/itl/listcity.asp?slovo=c" className="link abcd">C</a>
+                        <a href="/listcity.asp?slovo=c" className="link abcd">C</a>
                     </li>
                     <li>
-                        <a href="/itl/listcity.asp?slovo=č" className="link abcd">Č</a>
+                        <a href="/listcity.asp?slovo=č" className="link abcd">Č</a>
                     </li>
                     <li>
-                        <a href="/itl/listcity.asp?slovo=ć" className="link abcd">Ć</a>
+                        <a href="/listcity.asp?slovo=ć" className="link abcd">Ć</a>
                     </li>
                     <li>
-                        <a href="/itl/listcity.asp?slovo=d" className="link abcd">D</a>
+                        <a href="/listcity.asp?slovo=d" className="link abcd">D</a>
                     </li>
                     <li>
-                        <a href="/itl/listcity.asp?slovo=dž" className="link abcd">Dž</a>
+                        <a href="/listcity.asp?slovo=dž" className="link abcd">Dž</a>
                     </li>
                     <li>
-                        <a href="/itl/listcity.asp?slovo=đ" className="link abcd">Đ</a>
+                        <a href="/listcity.asp?slovo=đ" className="link abcd">Đ</a>
                     </li>
                     <li>
-                        <a href="/itl/listcity.asp?slovo=e" className="link abcd">E</a>
+                        <a href="/listcity.asp?slovo=e" className="link abcd">E</a>
                     </li>
                     <li>
-                        <a href="/itl/listcity.asp?slovo=f" className="link abcd">F</a>
+                        <a href="/listcity.asp?slovo=f" className="link abcd">F</a>
                     </li>
                     <li>
-                        <a href="/itl/listcity.asp?slovo=g" className="link abcd">G</a>
+                        <a href="/listcity.asp?slovo=g" className="link abcd">G</a>
                     </li>
                     <li>
-                        <a href="/itl/listcity.asp?slovo=h" className="link abcd">H</a>
+                        <a href="/listcity.asp?slovo=h" className="link abcd">H</a>
                     </li>
                     <li>
-                        <a href="/itl/listcity.asp?slovo=i" className="link abcd">I</a>
+                        <a href="/listcity.asp?slovo=i" className="link abcd">I</a>
                     </li>
                     <li>
-                        <a href="/itl/listcity.asp?slovo=j" className="link abcd">J</a>
+                        <a href="/listcity.asp?slovo=j" className="link abcd">J</a>
                     </li>
                     <li>
-                        <a href="/itl/listcity.asp?slovo=k" className="link abcd">K</a>
+                        <a href="/listcity.asp?slovo=k" className="link abcd">K</a>
                     </li>
                     <li>
-                        <a href="/itl/listcity.asp?slovo=l" className="link abcd">L</a>
+                        <a href="/listcity.asp?slovo=l" className="link abcd">L</a>
                     </li>
                     <li>
-                        <a href="/itl/listcity.asp?slovo=lj" className="link abcd">LJ</a>
+                        <a href="/listcity.asp?slovo=lj" className="link abcd">LJ</a>
                     </li>
                     <li>
-                        <a href="/itl/listcity.asp?slovo=m" className="link abcd">M</a>
+                        <a href="/listcity.asp?slovo=m" className="link abcd">M</a>
                     </li>
                     <li>
-                        <a href="/itl/listcity.asp?slovo=n" className="link abcd">N</a>
+                        <a href="/listcity.asp?slovo=n" className="link abcd">N</a>
                     </li>
                     <li>
-                        <a href="/itl/listcity.asp?slovo=nj" className="link abcd">NJ</a>
+                        <a href="/listcity.asp?slovo=nj" className="link abcd">NJ</a>
                     </li>
                     <li>
-                        <a href="/itl/listcity.asp?slovo=o" className="link abcd">O</a>
+                        <a href="/listcity.asp?slovo=o" className="link abcd">O</a>
                     </li>
                     <li>
-                        <a href="/itl/listcity.asp?slovo=p" className="link abcd">P</a>
+                        <a href="/listcity.asp?slovo=p" className="link abcd">P</a>
                     </li>
                     <li>
-                        <a href="/itl/listcity.asp?slovo=r" className="link abcd">R</a>
+                        <a href="/listcity.asp?slovo=r" className="link abcd">R</a>
                     </li>
                     <li>
-                        <a href="/itl/listcity.asp?slovo=s" className="link abcd">S</a>
+                        <a href="/listcity.asp?slovo=s" className="link abcd">S</a>
                     </li>
                     <li>
-                        <a href="/itl/listcity.asp?slovo=š" className="link abcd">Š</a>
+                        <a href="/listcity.asp?slovo=š" className="link abcd">Š</a>
                     </li>
                     <li>
-                        <a href="/itl/listcity.asp?slovo=t" className="link abcd">T</a>
+                        <a href="/listcity.asp?slovo=t" className="link abcd">T</a>
                     </li>
                     <li>
-                        <a href="/itl/listcity.asp?slovo=u" className="link abcd">U</a>
+                        <a href="/listcity.asp?slovo=u" className="link abcd">U</a>
                     </li>
                     <li>
-                        <a href="/itl/listcity.asp?slovo=v" className="link abcd">V</a>
+                        <a href="/listcity.asp?slovo=v" className="link abcd">V</a>
                     </li>
                     <li>
-                        <a href="/itl/listcity.asp?slovo=z" className="link abcd">Z</a>
+                        <a href="/listcity.asp?slovo=z" className="link abcd">Z</a>
                     </li>
                     <li>
-                        <a href="/itl/listcity.asp?slovo=ž" className="link abcd">Ž</a>
+                        <a href="/listcity.asp?slovo=ž" className="link abcd">Ž</a>
                     </li>
                     <li>
-                        <a href="/itl/listcity.asp" className="link abcd">A-Ž</a>
+                        <a href="/listcity.asp" className="link abcd">A-Ž</a>
                     </li>
                 </ul>
             </div>
