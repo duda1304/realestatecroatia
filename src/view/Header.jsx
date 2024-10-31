@@ -4,7 +4,7 @@ export default function Header() {
             <div>
                 <div id="logo">
                     <a href="/">
-                        <img src="./src/assets/img/REC_logo_novo.png" alt="RealEstateCroatia.com"></img>
+                        <img src="/assets/img/REC_logo_novo.png" alt="RealEstateCroatia.com"></img>
                     </a>
                 </div>
                 <div id="mainBan">
@@ -40,12 +40,12 @@ export default function Header() {
                 <div className="d-flex align-items-center">
                   {/* login */}
                     <a href="https://agentor2.realestatecroatia.com" className="nav-link d-flex align-items-center login">
-                        <img src="./src/assets/icon/login.png" alt="login image" className="img-fluid me-1"></img>
+                        <img src="/assets/icon/login.png" alt="login image" className="img-fluid me-1"></img>
                         Login
                     </a>
                   {/* language */}
                     <a href="#" className="nav-link flag rounded-circle overflow-hidden d-flex justify-content-center align-items-center ms-3 me-3 language">
-                        <img src="./src/assets/flag/flagitaly.png" alt="language image" className="img-fluid me-1"></img>
+                        <img src="/assets/flag/flagitaly.png" alt="language image" className="img-fluid me-1"></img>
                         ITA
                     </a>
                 </div>

@@ -55,7 +55,7 @@ export default function Card(props) {
           {/* details with icons */}
           <div className="d-flex align-items-center card-ultimi-info mt-2 mb-1">
             <img
-              src="./src/assets/icon/property.png"
+              src="/assets/icon/property.png"
               alt="Apartment icon"
               className="me-2"
             />
@@ -66,7 +66,7 @@ export default function Card(props) {
           </div>
           <div className="d-flex align-items-center card-ultimi-info mb-1">
             <img
-              src="./src/assets/icon/agency.png"
+              src="/assets/icon/agency.png"
               alt="Seller icon"
               className="me-2"
             />
@@ -82,7 +82,7 @@ export default function Card(props) {
           </div>
           <div className="d-flex align-items-center mb-2 card-ultimi-info">
             <img
-              src="./src/assets/icon/dot.png"
+              src="/assets/icon/dot.png"
               alt="ID icon"
               className="me-2"
             />
