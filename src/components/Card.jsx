@@ -1,5 +1,24 @@
 export default function Card(props) {
 
+  const propertyTypeMap = {
+    1: 'Kuća',
+    2: 'Stan',
+    3: 'Zemljište',
+    4: 'Poslovni prostor'
+  };
+
+  const propertyType = propertyTypeMap[props.propertyTypeId] || 'Nepoznato';
+
+  let squareFootage = '';
+  if (props.title) {
+    const titleParts = props.title.split(',');
+    const lastPart = titleParts[titleParts.length - 1].trim();
+    const squareFootagePattern = /^[\d.,]+\s*m2$/i;
+    if (squareFootagePattern.test(lastPart)) {
+      squareFootage = lastPart;
+    }
+  }
+
   const formatPrice = (price) => {
     return price.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
   };
@@ -12,7 +31,7 @@ export default function Card(props) {
         <div className="image-container">
           <img
             src={props.imageUrl || "path/to/imageNotFound.jpg"}
-            className="img-fluid rounded-top image-card-ultimi"
+            className="img-fluid image-card-ultimi"
             alt="Image"
           />
         </div>
@@ -20,7 +39,7 @@ export default function Card(props) {
           {/* title and price */}
           <h5 className="card-ultimi-title mb-1">
             {props.city}
-            <span className="fw-light"> ({props.region} ŽUPANIJA)</span>
+            <span className="fw-light"> ({props.region})</span>
           </h5>
           <p className="card-ultimi-price mt-0 fw-bolder">
             <span className="fw-bolder">{formattedPrice}</span> €
@@ -28,8 +47,8 @@ export default function Card(props) {
           {/* description */}
           <p className="card-ultimi-text mb-2 mt-2">
             {props.description
-              ? props.description.length > 150
-                ? props.description.slice(0, 150) + "..."
+              ? props.description.length > 120
+                ? props.description.slice(0, 120) + "..."
                 : props.description
               : ''}
           </p>
@@ -40,7 +59,10 @@ export default function Card(props) {
               alt="Apartment icon"
               className="me-2"
             />
-            <p className="mb-0"> {props.title}</p>
+            <p className="mb-0">
+              {propertyType}
+              {squareFootage ? ', ' + squareFootage : ''}
+            </p>
           </div>
           <div className="d-flex align-items-center card-ultimi-info mb-1">
             <img
