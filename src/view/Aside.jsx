@@ -11,7 +11,7 @@ export default function Aside(props) {
         <aside>
         <nav className="overflow-hidden rounded-3">
             <h3 className="d-flex align-items-center">
-                <img src="./src/assets/icon/agencies.png" alt="icon" className="icon me-2" />
+                <img src="/assets/icon/agencies.png" alt="icon" className="icon me-2" />
                 Agenzie
             </h3>
             <ul className="subMenu">
@@ -20,7 +20,7 @@ export default function Aside(props) {
                 </li>
             </ul>
             <h3 className="d-flex align-items-center">
-                <img src="./src/assets/icon/list.png" alt="icon" className="icon me-2" />
+                <img src="/assets/icon/list.png" alt="icon" className="icon me-2" />
                 Elenchi
             </h3>
             <ul className="subMenu">
@@ -39,7 +39,7 @@ export default function Aside(props) {
             </ul>
 
             <h3 className="d-flex align-items-center">
-                <img src="./src/assets/icon/tag.png" alt="icon" className="icon me-2" />
+                <img src="/assets/icon/tag.png" alt="icon" className="icon me-2" />
                 Tag
             </h3>
             <ul className="subMenu">
@@ -72,7 +72,7 @@ export default function Aside(props) {
                 </li>
             </ul>
             <h3 className="d-flex align-items-center">
-                <img src="./src/assets/icon/users.png" alt="icon" className="icon me-2" />
+                <img src="/assets/icon/users.png" alt="icon" className="icon me-2" />
                 Utenti
             </h3>
             <ul className="subMenu">
@@ -186,7 +186,7 @@ export default function Aside(props) {
             </ul>
         </nav>
         {/* <div className="ajax-preload" data-ajax-id="ajax-leftbanners" data-ajax-link="/Ajax/LeftBanners/">
-            <img src="./src/images/ajax-loader.gif" alt="Left Banners" />
+            <img src="/images/ajax-loader.gif" alt="Left Banners" />
         </div> */}
         <div className="cf h950">
             <div className="subAd pt-10">

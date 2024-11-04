@@ -5461,3 +5461,30 @@ img.imgsold {
         display: none !important;
     }
 }
+
+
+
+/* AUTOCOMPLETE */
+.input-suggestion-wrapper {
+    flex: 0.95;
+    position: relative;
+}
+
+.suggestions {
+    z-index: 1000; 
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.suggestions .list-group-item {
+    cursor: pointer;
+    font-size: 1rem;
+    border: none;
+}
+
+.suggestions .list-group-item:hover {
+    background-color: #f0f0f0;
+}
+
+
+  
