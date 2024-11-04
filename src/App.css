@@ -93,6 +93,7 @@ video {
 body {
     line-height: 1;
     -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
     text-size-adjust: none;
 }
 
@@ -350,10 +351,10 @@ strong {
 }
 
 
-select {
-    /* -moz-appearance: none;
+/* select { */
+/* -moz-appearance: none;
     -webkit-appearance: none; */
-}
+/* } */
 
 
 .s600 {
@@ -433,7 +434,7 @@ h2.head.spacebetween {
     justify-content: space-between;
 }
 
-h2.head a {}
+/* h2.head a {} */
 
 
 a.help {
@@ -526,7 +527,7 @@ div.container.stat {
 }
 
 
-header {}
+/* header {} */
 
 footer {
     background-color: #444654 !important;
@@ -1345,7 +1346,7 @@ ul.formaHolder input.submit:hover {
 }
 
 
-#show_search {}
+/* #show_search {} */
 
 
 .hide_search {
@@ -1643,7 +1644,8 @@ div.topagencije_holder {
     flex-shrink: 0;
 }
 
-#listing_filter>div.lista_nekretnine_zupanije2>div.forma div.info {}
+/* 
+#listing_filter>div.lista_nekretnine_zupanije2>div.forma div.info {} */
 
 #listing_filter>div.lista_nekretnine_zupanije2>div.forma div span {
     padding: 0 5px;
@@ -1712,7 +1714,7 @@ white-space: nowrap;
     flex: 0 0 240px;
 }
 
-#listing_filter div.lista_agencija div.total2>div {}
+/* #listing_filter div.lista_agencija div.total2>div {} */
 
 #listing_filter div.lista_agencija div.total2>div+div {
     margin-left: 20px;
@@ -1760,8 +1762,8 @@ white-space: nowrap;
     padding: 0 10px 0 0;
 }
 
-#listing_filter>div.lista_agencija div.forma>div>div+div,
-#listing_filter>div.lista_agencija div.forma form>div>div+div {}
+/* #listing_filter>div.lista_agencija div.forma>div>div+div,
+#listing_filter>div.lista_agencija div.forma form>div>div+div {} */
 
 div.lista_gradova {
     display: flex;
@@ -1782,7 +1784,7 @@ div.lista_gradova li {
     list-style: none;
 }
 
-div.lista_gradova li+li {}
+/* div.lista_gradova li+li {} */
 
 
 /*
@@ -2077,7 +2079,7 @@ div.det_grid {
     grid-template-columns: auto 30%;
 }
 
-div.det_main {}
+/* div.det_main {} */
 
 ul.det_main_nav {
     display: flex;
@@ -2506,7 +2508,7 @@ div.det_sub_nekretnine p.naslov {
 }
 
 
-#zupanije_list {}
+/* #zupanije_list {} */
 
 #zupanije_list>div {
     align-items: flex-start;
@@ -2652,7 +2654,7 @@ div.det_sub_nekretnine p.naslov {
     width: 90%;
 }
 
-#cjenik_banneri>div>div.naziv span {}
+/* #cjenik_banneri>div>div.naziv span {} */
 
 
 #cjenik_banneri>div>div.opis {
@@ -2801,7 +2803,7 @@ div.sub {
     text-decoration: none;
 }
 
-div.subBan_holder {}
+/* div.subBan_holder {} */
 
 
 #subBan>div {
@@ -3290,7 +3292,8 @@ a.back {
         display: none;
     }
 
-    #tabs {}
+    /* 
+    #tabs {} */
 
     ul.det_main_data li {
         flex: 0 0 100%;
@@ -4213,7 +4216,7 @@ a.back {
 }
 
 /* Dots */
-.slick-dotted.slick-slider {}
+/* .slick-dotted.slick-slider {} */
 
 .slick-dots {
     position: absolute;
@@ -4329,7 +4332,9 @@ a.back {
 .sp-slides {
     position: relative;
     -webkit-backface-visibility: hidden;
-    -webkit-perspective: 1000
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    perspective: 1000;
 }
 
 .sp-slide {
@@ -4568,11 +4573,12 @@ a.back {
 .sp-layer {
     position: absolute;
     margin: 0;
-    box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    box-sizing: border-box;
     -webkit-font-smoothing: subpixel-antialiased;
-    -webkit-backface-visibility: hidden
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden
 }
 
 .sp-black {
@@ -5007,7 +5013,8 @@ a.sp-video {
 
 a.sp-video img {
     -webkit-backface-visibility: hidden;
-    border: none
+    backface-visibility: hidden;
+    border: none;
 }
 
 a.sp-video:after {
@@ -5040,18 +5047,18 @@ a.sp-video:after {
     -webkit-box-shadow: none !important;
     -mox-box-shadow: none !important;
     box-shadow: none !important;
-    transition: none;
     -moz-transition: none;
     -webkit-transition: none;
-    -o-transition: none
+    -o-transition: none;
+    transition: none;
 }
 
 .slider-pro a {
     position: static;
-    transition: none !important;
     -moz-transition: none !important;
     -webkit-transition: none !important;
-    -o-transition: none !important
+    -o-transition: none !important;
+    transition: none !important;
 }
 
 .slider-pro canvas,
