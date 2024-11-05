@@ -1,91 +1,75 @@
-const accordionData = [
-  {
-    title: "Immobili",
-    collapseId: "collapseOne",
-    items: [
-      { name: "Ricerca", link: "#" },
-      { name: "Elenco agenzie", link: "#" },
-      { name: "Ultimi 20 registrati", link: "#" },
-      { name: "Elenco per citta", link: "#" },
-      { name: "Elenco per regione", link: "#" },
-      { name: "Case nuove", link: "#" },
-      { name: "Prima fila del mare", link: "#" },
-    ],
-  },
-  {
-    title: "Annunci immobiliari popolari",
-    collapseId: "collapseTwo",
-    items: [
-      { name: "Istra", link: "#" },
-      { name: "Kvarner", link: "#" },
-      { name: "Dubrovnik", link: "#" },
-      { name: "Zagreb", link: "#" },
-      { name: "Split", link: "#" },
-      { name: "Zadar", link: "#" },
-      { name: "Varazdin", link: "#" },
-      { name: "Lika", link: "#" },
-    ],
-  },
-  {
-    title: "Pubblicità",
-    collapseId: "collapseThree",
-    items: [
-      { name: "Pacchetti", link: "#" },
-      { name: "Servizi aggiuntivi", link: "#" },
-      { name: "Banner", link: "#" },
-      { name: "Sponsorizzazioni", link: "#" },
-    ],
-  },
-  {
-    title: "Utenti",
-    collapseId: "collapseFour",
-    items: [
-      { name: "Accesso", link: "#" },
-      { name: "Registrazione", link: "#" },
-    ],
-  },
-];
+import { useEffect, useRef } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
-export default function MenuMobile() {
+
+export default function MenuMobile({ isOpen, setActiveMenu, activeMenu, menuData, closeMenu }) {
+
+  const firstMenuItemRef = useRef(null);
+
+  useEffect(() => {
+    if (activeMenu !== null && firstMenuItemRef.current) {
+      firstMenuItemRef.current.focus();
+    }
+  }, [activeMenu]);
+
+  const handleNavigate = (index) => {
+    setActiveMenu(index);
+  };
   return (
-    <div className="container d-block d-md-none show" id="mobile-accordion">
-      <div className="accordion" >
-        {accordionData.map((section, index) => (
-          <div className="accordion-item" key={index}>
-            <h2 className="accordion-header" id={`heading${index + 1}`}>
+    <nav
+      id="mobile-menu"
+      role="navigation"
+      aria-label="Mobile Menu"
+      className={`header-mobile-container ${isOpen ? 'open' : ''}`}
+    >
+      {activeMenu === null ? (
+        <div className="main-menu">
+          {menuData.map((section, index) => (
+            <div key={index} className="main-menu-item">
               <button
-                className="accordion-button collapsed fw-bolder accordion-button-mobile"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target={`#${section.collapseId}`}
-                aria-expanded="false"
-                aria-controls={section.collapseId}
+                className="main-menu-button"
+                onClick={() => handleNavigate(index)}
+                aria-haspopup="true"
+                aria-controls={`submenu-${index}`}
+                ref={index === 0 ? firstMenuItemRef : null}
               >
-                {section.title}
+                <span className="main-menu-title">{section.title}</span>
+                <FontAwesomeIcon icon={faChevronRight} className="arrow-icon" />
               </button>
-            </h2>
-            <hr className="d-md-none hr-immobili" />
-            <div
-              id={section.collapseId}
-              className="accordion-collapse collapse"
-              aria-labelledby={`heading${index + 1}`}
-              data-bs-parent="#accordionMobile"
-            >
-              <div className="accordion-body">
-                <ul className="list-unstyled">
-                  {section.items.map((item, idx) => (
-                    <li key={idx}>
-                      <a href={item.link} className="accordion-li">
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <hr className="menu-divider" />
             </div>
+          ))}
+          <div className="main-menu-login">
+            <a
+              href="https://agentor2.realestatecroatia.com"
+              className="login-button"
+            >
+              LOGIN
+            </a>
           </div>
-        ))}
-      </div>
-    </div>
+        </div>
+      ) : (
+        <div className={`sub-menu ${activeMenu !== null ? 'open' : ''}`}>
+          <hr className="menu-divider" />
+          <ul className="sub-menu-list">
+            {menuData[activeMenu].items.map((item, id) => (
+              <li key={id} className="sub-menu-list-item">
+                <a
+                  href={item.link}
+                  className="sub-menu-link"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    closeMenu();
+                  }}
+                >
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </nav>
   );
 }
