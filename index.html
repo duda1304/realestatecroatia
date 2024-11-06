@@ -159,35 +159,34 @@
     </script>
 
     <script src="./src/js/jqueryval.min.js?v=CgfDDLYiv9YubmSeDVQEmVV-fzw"></script>
-    <script src="./src/js/RECAutoComplete.js?v=QDkNCnCy5EG1TPLSchb4X9WyT1Q"></script>
     <script src="./src/js/rechome.min.js?v=5Y4pDDGoe6YuT2zgFjIjA0akefM"></script>
 
     <script>
-      $(".ajaxsubmit").submit(function (e) {
-        e.preventDefault();
-        if ($("#mtzvform").valid()) {
-          $.post("/itl/Home/MTZV", $("#mtzvform").serialize()).done(function (
-            data
-          ) {
-            if (data != "err" && data != "antispam") {
-              $("#tabs-4").html(data);
-            } else if (data == "antispam") {
-              if (!$("#MTZVViewModel_cres").hasClass("redborder")) {
-                $("#MTZVViewModel_cres").addClass("redborder");
-              }
-            } else {
-              if (!$("#tabs_4 form input.submit").hasClass("redborder")) {
-                $("#tabs_4 form input.submit").addClass("redborder");
-              }
-            }
-          });
-        }
-      });
+      // $(".ajaxsubmit").submit(function (e) {
+      //   e.preventDefault();
+      //   if ($("#mtzvform").valid()) {
+      //     $.post("/itl/Home/MTZV", $("#mtzvform").serialize()).done(function (
+      //       data
+      //     ) {
+      //       if (data != "err" && data != "antispam") {
+      //         $("#tabs-4").html(data);
+      //       } else if (data == "antispam") {
+      //         if (!$("#MTZVViewModel_cres").hasClass("redborder")) {
+      //           $("#MTZVViewModel_cres").addClass("redborder");
+      //         }
+      //       } else {
+      //         if (!$("#tabs_4 form input.submit").hasClass("redborder")) {
+      //           $("#tabs_4 form input.submit").addClass("redborder");
+      //         }
+      //       }
+      //     });
+      //   }
+      // });
 
-      $(document).ready(function () {
-        $("#tabs").tabs({ active: 0 });
-        $("#mjesto_o").focus();
-      });
+      // $(document).ready(function () {
+      //   $("#tabs").tabs({ active: 0 });
+      //   $("#mjesto_o").focus();
+      // });
     </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

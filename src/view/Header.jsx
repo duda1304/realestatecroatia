@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import MenuMobile from "./MenuMobile";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom'
 
 const menuData = [
   {
@@ -81,6 +82,12 @@ export default function Header() {
     };
   }, [isOpen]);
 
+  const navigate = useNavigate();
+
+  const handleNavigation = (path) => {
+      navigate(path);
+  };
+
   return (
     <header className={`header ${isOpen ? 'show' : ''}`}>
       <div className="d-flex justify-content-between">
@@ -124,10 +131,10 @@ export default function Header() {
         <nav id="mainNav" className="mt-2">
           <ul className="main-nav-list">
             <li><a href="/">Immobili</a></li>
-            <li><a href="/vendita-nuove-costruzioni">Progetti</a></li>
-            <li><a href="/vendita-prima-fila-dal-mare">Prima fila dal mare</a></li>
-            <li><a href="/vendita-proprieta-di-lusso">Propriet&#xE0; di lusso</a></li>
-            <li><a href="/vendita-con-piscina">Ville</a></li>
+            <li><a onClick={() => handleNavigation('/vendita-nuove-costruzioni')} className="link none">Progetti</a></li>
+            <li><a onClick={() => handleNavigation('/vendita-prima-fila-dal-mare')} className="link none">Prima fila dal mare</a></li>
+            <li><a onClick={() => handleNavigation('/vendita-proprieta-di-lusso')} className="link none">Propriet&#xE0; di lusso</a></li>
+            <li><a onClick={() => handleNavigation('/vendita-con-piscina')} className="link none">Ville</a></li>
             <li><a href="/statistika.asp">Statistiche</a></li>
           </ul>
         </nav>
