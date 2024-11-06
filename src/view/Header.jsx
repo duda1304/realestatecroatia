@@ -6,44 +6,42 @@ import { useNavigate } from 'react-router-dom'
 
 const menuData = [
   {
-    title: "Immobili",
+    title: "Agenzie",
     items: [
-      { name: "Ricerca", link: "#" },
-      { name: "Elenco agenzie", link: "#" },
+      { name: "Elenco agenzie", link: "/listag" }
+    ],
+  },
+  {
+    title: "Elenchi",
+    items: [
       { name: "Ultimi 20 registrati", link: "#" },
-      { name: "Elenco per città", link: "#" },
-      { name: "Elenco per regione", link: "#" },
-      { name: "Case nuove", link: "#" },
+      { name: "Ultimi 100 registrati", link: "#" },
+      { name: "Elenco per città", link: "/listcity" },
+      { name: "Elenco per regione", link: "/listzup" },
+    ],
+  },
+  {
+    title: "Tag",
+    items: [
       { name: "Prima fila del mare", link: "#" },
-    ],
-  },
-  {
-    title: "Annunci immobiliari popolari",
-    items: [
-      { name: "Istra", link: "#" },
-      { name: "Kvarner", link: "#" },
-      { name: "Dubrovnik", link: "#" },
-      { name: "Zagreb", link: "#" },
-      { name: "Split", link: "#" },
-      { name: "Zadar", link: "#" },
-      { name: "Varazdin", link: "#" },
-      { name: "Lika", link: "#" },
-    ],
-  },
-  {
-    title: "Pubblicità",
-    items: [
-      { name: "Pacchetti", link: "#" },
-      { name: "Servizi aggiuntivi", link: "#" },
-      { name: "Banner", link: "#" },
-      { name: "Sponsorizzazioni", link: "#" },
+      { name: "Case nuove", link: "#" },
+      {name: "Proprietà vista mare", link: "/vendita-proprieta-vista-mare"},
+      {name: "Case di pietra", link: "/vendita-casa-di-pietra"},
+      {name: "Appartamenti", link: "/vendita-appartamenti"},
+      {name: "Proprietà di lusso", link: "/vendita-proprieta-di-lusso"},
+      {name: "Case", link: "/vendita-case"},
+      {name: "Vendita diretta dal proprietario", link: "/vendita-diretta-dal-proprietario"},
+      {name: "Albergi", link: "/vendita-albergo"}
+    
     ],
   },
   {
     title: "Utenti",
     items: [
-      { name: "Accesso", link: "#" },
-      { name: "Registrazione", link: "#" },
+      { name: "Registrazione - Agenzie", link: "https://agentor2.realestatecroatia.com/account/register?tip=1" },
+      { name: "Registrazione - Privata", link: "https://agentor2.realestatecroatia.com/account/register?tip=2" },
+      {name: "Accesso", link: "https://agentor2.realestatecroatia.com/"},
+      {name: "Pubblicità", link: "/paketi"}
     ],
   },
 ];
