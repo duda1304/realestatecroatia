@@ -86,7 +86,7 @@ export default function FilterModal(props) {
         e.preventDefault();        
         e.stopPropagation(); 
         props.setSearchValues(data)
-        const title = `${propertyTypeName} ${regionName !== '' ? `- ${regionName}` : ''} ${data.cityArea !== '' ? `- ${data.cityArea}`: ''} ${data.city !== '' ? `- ${data.city}`: ''} ${data.priceFrom !== '' ? `- da ${data.priceFrom}` : ''} ${data.priceTo !== '' ? `- a ${data.priceTo}` : ''} ${data.areaFrom !== '' ? `- da ${data.areaFrom}m2` : ''} ${data.areaTo !== '' ? `- a ${data.areaTo}m2` : ''} - Ordine ${sortName}` 
+        const title = `${propertyTypeName !== '' ? `${propertyTypeName} - ` : ''} ${regionName !== '' ? `${regionName} ` : ''} ${data.cityArea !== '' ? `- ${data.cityArea} `: ''} ${data.city !== '' ? `- ${data.city} `: ''} ${data.priceFrom !== '' ? `- da ${data.priceFrom} ` : ''} ${data.priceTo !== '' ? `- a ${data.priceTo} ` : ''} ${data.areaFrom !== '' ? `- da ${data.areaFrom}m2 ` : ''} ${data.areaTo !== '' ? `- a ${data.areaTo}m2 ` : ''} - Ordine ${sortName}` 
         props.setTitle(title)
         navigate('/cerca')
     }

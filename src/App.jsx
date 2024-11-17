@@ -25,8 +25,8 @@ function App() {
         <Aside />
         <Routes>
           <Route exact path="/" element={<Homepage setSearchValues={(data) => setSearchValues(data)} setTitle={(value) => setTitle(value)}/>} />
-          <Route path="/top-100" element={<List count={100} title='Elenco delle ultime 100 proprietà' />} />
-          <Route path="/top-20" element={<List count={20} title='Elenco delle ultime 20 proprietà' />} />
+          <Route path="/top-100" element={<List hideCount={true} title='Elenco delle ultime 100 proprietà' />} />
+          <Route path="/top-20" element={<List hideCount={true} title='Elenco delle ultime 20 proprietà' />} />
           <Route path="/vendita-prima-fila-dal-mare" element={<List parameter={'tagList'} value={10} title='Prima fina dal mare' />} />
           <Route path="/vendita-nuove-costruzioni" element={<List parameter={'tagList'} value={11} title='Nuove costruzioni' />} />
           <Route path="/vendita-proprieta-vista-mare" element={<List parameter={'tagList'} value={22} title='Proprieta vista mare' />} />
@@ -42,7 +42,6 @@ function App() {
           <Route path="/*" element={<h1 className='mt-5 text-center fs-5'>Under construction</h1>} />
 
           <Route path="/cerca" element={<List parameter={parameters} value={values} title={title}/>} />
-
         </Routes>
         <RightSideBanners />
       </div>

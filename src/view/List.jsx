@@ -41,7 +41,7 @@ export default function List(props) {
                 console.log(data['message']);
                 setError(true);
             } else {
-                if (!count) {
+                if (!props.hideCount) {
                     setCount(data['count']);
                 }
                 setData(data['data']);
@@ -56,18 +56,14 @@ export default function List(props) {
     }
 
     useEffect(() => {
-        if (props.count) {
-            setCount(props.count);
-        } else {
-            setCount(null);
-        }
+        setCount(null);
         get();
     }, [props]);
 
     return (
         <main>
             <section className="p-2 items-list d-flex flex-column">
-                <h2 className="h5 list-title mb-2">{props.title || ''} {!props.count && count ? `(${count})` : ''}</h2>
+                <h2 className="h5 list-title mb-2">{props.title || ''} {count && `(${count})`}</h2>
                 {loading && <Loading />}
                 {error && <p>Error getting data from server</p>}
                 {data.map((item, index) => (
