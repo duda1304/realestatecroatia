@@ -77,7 +77,7 @@ export default function List(props) {
                 console.log(data['message']);
                 setError(true);
             } else {
-                if (!props.hideCount) {
+                if (!props.count) {
                     setCount(data['count']);
                 }
                 setData(data['data']);
@@ -93,7 +93,11 @@ export default function List(props) {
 
 
     useEffect(() => {
-        setCount(null);
+        if (props.count) {
+            setCount(props.count)
+        } else {
+            setCount(null);
+        }
         resetFilter();
         get();
     }, [props]);
@@ -123,7 +127,7 @@ export default function List(props) {
     return (
         <main>
             <section className="p-2 items-list d-flex flex-column">
-                <h2 className="h5 list-title mb-2">{props.title || ''} {count && `(${count})`}</h2>
+                <h2 className="h5 list-title mb-2">{props.title || ''} {!props.count && count && `(${count})`}</h2>
                 {loading && <Loading />}
                 {error && <p>Error getting data from server</p>}
                 {!loading && !error && data.count !== 0 &&  <><h4 className="modal-title mb-3 mt-3">Prezzo</h4>
