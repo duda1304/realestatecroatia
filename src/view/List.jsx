@@ -79,6 +79,10 @@ export default function List(props) {
             } else {
                 if (!props.count) {
                     setCount(data['count']);
+                } else {
+                    if (props.count && data['count'] < props.count) {
+                        setCount(data['count']);
+                    }
                 }
                 setData(data['data']);
             }
@@ -116,6 +120,7 @@ export default function List(props) {
             [name]: value 
           }));
     }
+
     const applyFilter = () => {
         if (filter.priceFrom === '' && filter.priceTo === '') {
             return
@@ -130,7 +135,7 @@ export default function List(props) {
                 <h2 className="h5 list-title mb-2">{props.title || ''} {!props.count && count && `(${count})`}</h2>
                 {loading && <Loading />}
                 {error && <p>Error getting data from server</p>}
-                {!loading && !error && data.count !== 0 &&  <><h4 className="modal-title mb-3 mt-3">Prezzo</h4>
+                {!loading && !error && data.length !== 0 &&  <><h4 className="modal-title mb-3 mt-3">Prezzo</h4>
                             <div className="row mb-3">
                                 <div className="col d-flex align-items-center">
                                     <label htmlFor="prezzoDa" className="form-label modal-text mb-0 me-2">da</label>
