@@ -16,6 +16,8 @@ export default function List(props) {
         'priceFrom' : '',
         'priceTo' : ''
     })
+    const [previousFilter, setPreviousFilter] = useState(filter);
+
 
     const resetFilter = () => {
         setFilter(prevFilter =>
@@ -27,8 +29,11 @@ export default function List(props) {
       };
 
     const handlePageClick = (event) => {
-        setCurrentPage(event.selected + 1);
-        get();
+        const newPage = event.selected + 1;
+        if (newPage !== currentPage) {
+            setCurrentPage(newPage);
+            get();
+        }
     };
     
     const itemsPerPage = 10;
@@ -125,8 +130,11 @@ export default function List(props) {
         if (filter.priceFrom === '' && filter.priceTo === '') {
             return
         }
-        setCount(null);
-        get();
+        if (JSON.stringify(filter) !== JSON.stringify(previousFilter)) {
+            setCount(null); 
+            setPreviousFilter(filter); 
+            get(); 
+        }
     }
 
     return (
@@ -151,7 +159,7 @@ export default function List(props) {
                 {count && 
                     <ReactPaginate
                         pageCount={Math.ceil(count / itemsPerPage)}
-                        onPageChange={handlePageClick}
+                        onClick={handlePageClick}
                         containerClassName={"pagination"}
                         activeClassName={"active"}
                         previousLabel=""
