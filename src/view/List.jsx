@@ -31,6 +31,10 @@ export default function List(props) {
         if (newPage !== currentPage) {
             setCurrentPage(newPage);
             get();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'  
+            });
         }
     };
     
