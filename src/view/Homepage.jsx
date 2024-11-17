@@ -16,7 +16,7 @@ export default function Homepage(props) {
     return (
         <main>
             <Alphabet />
-            <Search />
+            <Search setSearchValues={(data) => props.setSearchValues(data)} setTitle={(value) => props.setTitle(value)}/>
             <FilterModal setSearchValues={(data) => props.setSearchValues(data)} setTitle={(value) => props.setTitle(value)}/>
             {/* LINKS IN THE MIDDLE NEW */}
             <section className="container-fluid p-2" id="tagSection">

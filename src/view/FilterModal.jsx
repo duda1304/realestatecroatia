@@ -82,6 +82,7 @@ export default function FilterModal(props) {
     }
 
     const navigate = useNavigate();
+    
     const handleSubmit = (e) => {
         e.preventDefault();        
         e.stopPropagation(); 
