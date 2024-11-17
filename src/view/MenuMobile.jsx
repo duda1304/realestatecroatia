@@ -16,6 +16,7 @@ export default function MenuMobile({ isOpen, setActiveMenu, activeMenu, menuData
   const handleNavigate = (index) => {
     setActiveMenu(index);
   };
+
   return (
     <nav
       id="mobile-menu"
@@ -60,7 +61,7 @@ export default function MenuMobile({ isOpen, setActiveMenu, activeMenu, menuData
                   className="sub-menu-link"
                   onClick={(e) => {
                     e.preventDefault();
-                    closeMenu();
+                    closeMenu(item.name);
                   }}
                 >
                   {item.name}

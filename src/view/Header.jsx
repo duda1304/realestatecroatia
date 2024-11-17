@@ -14,8 +14,8 @@ const menuData = [
   {
     title: "Elenchi",
     items: [
-      { name: "Ultimi 20 registrati", link: "#" },
-      { name: "Ultimi 100 registrati", link: "#" },
+      { name: "Ultimi 20 registrati", link: "/top-20"},
+      { name: "Ultimi 100 registrati", link: "/top-100" },
       { name: "Elenco per città", link: "/listcity" },
       { name: "Elenco per regione", link: "/listzup" },
     ],
@@ -23,8 +23,8 @@ const menuData = [
   {
     title: "Tag",
     items: [
-      { name: "Prima fila del mare", link: "#" },
-      { name: "Case nuove", link: "#" },
+      { name: "Prima fila dal mare", link: "'/vendita-prima-fila-dal-mare'" },
+      { name: "Case nuove", link: "/vendita-nuove-costruzioni" },
       {name: "Proprietà vista mare", link: "/vendita-proprieta-vista-mare"},
       {name: "Case di pietra", link: "/vendita-casa-di-pietra"},
       {name: "Appartamenti", link: "/vendita-appartamenti"},
@@ -49,7 +49,7 @@ const menuData = [
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
-
+  
   const toggleMenu = () => {
     if (!isOpen) {
       setIsOpen(true);
@@ -60,9 +60,14 @@ export default function Header() {
     }
   };
 
-  const closeMenu = () => {
+  const closeMenu = (name) => {
     setIsOpen(false);
     setActiveMenu(null);
+    const foundItem = menuData
+    .flatMap(category => category.items)  
+    .find(item => item.name === name);
+    handleNavigation(foundItem.link)
+
   };
 
   const handleBack = () => {
@@ -155,7 +160,7 @@ export default function Header() {
           setActiveMenu={setActiveMenu}
           activeMenu={activeMenu}
           menuData={menuData}
-          closeMenu={closeMenu}
+          closeMenu={(name) => closeMenu(name)}
         />
       )}
       <div className="abcd_holder">
