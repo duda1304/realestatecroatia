@@ -2,8 +2,6 @@ import Card from "../components/Card";
 import { useState, useEffect } from "react";
 import ReactPaginate from 'react-paginate';
 import Loading from "../components/Loading";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight, faFilter } from '@fortawesome/free-solid-svg-icons';
 
 export default function List(props) {
     const [loading, setLoading] = useState(true);
@@ -165,6 +163,7 @@ export default function List(props) {
                         previousLabel=""
                         nextLabel=""
                         initialPage={0}
+                        breakLabel={"..."} 
                     />
                 }
             </section>

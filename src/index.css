@@ -85,20 +85,24 @@ button:focus-visible {
   font-weight: bold;
 }
 
-.pagination .previous {
+.pagination .previous a {
   background-image: url('../src/assets/icon/previous_page.png');
   background-repeat: no-repeat;
   background-size: contain;
   width: 20px;
   height: 20px;
+  cursor: pointer;
+  display: inline-block;
 }
 
-.pagination .next {
+.pagination .next a {
   background-image: url('../src/assets/icon/next_page.png');
   background-repeat: no-repeat;
   background-size: contain;
   width: 20px;
   height: 20px;
+  cursor: pointer;
+  display: inline-block;
 }
 
 
