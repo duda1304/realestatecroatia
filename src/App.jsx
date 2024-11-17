@@ -9,10 +9,14 @@ import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 function App() {
-  // const [filter, setFilter] = useState(null)
-  // const [tagList, setTagList] = useState([]);
-  // const [propertyTypeId, setPropertyTypeId] = useState(null);
-  // const [lastItemsCount, setLastItemsCount] = useState(null);
+  const [parameters, setParameters] = useState([])
+  const [values, setValues] = useState([])
+  const [title, setTitle] = useState('')
+
+  const setSearchValues = (data) => {
+    setParameters(Object.keys(data));
+    setValues(Object.values(data));
+  }
 
   return (
     <Router>
@@ -20,7 +24,7 @@ function App() {
         <Header />
         <Aside />
         <Routes>
-          <Route exact path="/" element={<Homepage />} />
+          <Route exact path="/" element={<Homepage setSearchValues={(data) => setSearchValues(data)} setTitle={(value) => setTitle(value)}/>} />
           <Route path="/top-100" element={<List count={100} title='Elenco delle ultime 100 proprietà' />} />
           <Route path="/top-20" element={<List count={20} title='Elenco delle ultime 20 proprietà' />} />
           <Route path="/vendita-prima-fila-dal-mare" element={<List parameter={'tagList'} value={10} title='Prima fina dal mare' />} />
@@ -33,10 +37,11 @@ function App() {
           {/* CHECK THIS how to get non agency properties */}
           <Route path="/vendita-diretta-dal-proprietario" element={<List parameter={'propertyTypeId'} value={2} title='Diretta dal proprietario' />} />
           <Route path="/vendita-albergo" element={<List parameter={'tagList'} value={1} title='Albergi' />} />
-
           <Route path="/vendita-con-piscina" element={<List parameter={'tagList'} value={21} title='Con piscina' />} />
 
           <Route path="/*" element={<h1 className='mt-5 text-center fs-5'>Under construction</h1>} />
+
+          <Route path="/cerca" element={<List parameter={parameters} value={values} title={title}/>} />
 
         </Routes>
         <RightSideBanners />

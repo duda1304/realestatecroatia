@@ -6,7 +6,7 @@ import TopOffers from "./TopOffers";
 import { useNavigate } from 'react-router-dom'
 
 
-export default function Homepage() {
+export default function Homepage(props) {
     const navigate = useNavigate();
 
     const handleNavigation = (path) => {
@@ -17,7 +17,7 @@ export default function Homepage() {
         <main>
             <Alphabet />
             <Search />
-            <FilterModal />
+            <FilterModal setSearchValues={(data) => props.setSearchValues(data)} setTitle={(value) => props.setTitle(value)}/>
             {/* LINKS IN THE MIDDLE NEW */}
             <section className="container-fluid p-2" id="tagSection">
                 <div className="row gx-2">

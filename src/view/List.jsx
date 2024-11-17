@@ -22,7 +22,17 @@ export default function List(props) {
         setLoading(true);
         setError(false);
         
-        const queryString = props.parameter && props.value ? `${props.parameter}=${props.value}` : '';
+        let queryString = '';
+        if (props.parameter && props.value) {
+            if (Array.isArray(props.parameter) && Array.isArray(props.value)) {
+                props.parameter.forEach((parameter,index) => {
+                    queryString += `${parameter}=${props.value[index]}&`
+                })
+            } else {
+                queryString = `${props.parameter}=${props.value}`;
+            }
+        }
+       
         try {
             const response = await fetch(`https://milicic.net/get.php?page=${currentPage}&${queryString}`);
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
