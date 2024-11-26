@@ -1188,6 +1188,8 @@ aside nav a:hover {
 
     .image-card-agency {
         height: 100%;
+        border-top-left-radius: 7px;
+        border-bottom-left-radius: 7px;
     }
 
     .image-container {
@@ -1239,6 +1241,8 @@ aside nav a:hover {
 
     .image-card-agency {
         height: 240px;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
     }
 
 }
