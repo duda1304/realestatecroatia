@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import AgencyCard from "../components/AgencyCard";
 // import ReactPaginate from 'react-paginate'; 
 import Loading from "../components/Loading";

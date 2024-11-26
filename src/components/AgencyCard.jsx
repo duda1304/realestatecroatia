@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function AgencyCard(props) {
   return (
     <div className="card mb-3 mt-4 card-ultimi">
@@ -58,12 +60,12 @@ export default function AgencyCard(props) {
           </p>
           {/* button */}
           <div className="d-flex justify-content-end mt-auto">
-            <a
-              href="#"
+            <Link
+              to={`/agency`}
               className="btn btn-primary rounded card-ultimi-button p-1"
             >
               <span className="ultimi-underline-text">Vedi i dettagli</span> <span>&gt;</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
