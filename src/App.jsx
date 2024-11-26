@@ -8,6 +8,7 @@ import RightSideBanners from './view/RightSideBanners'
 import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import AgencyList from './view/AgencyList';
+import Agency from "./view/Agency";
 
 function App() {
   const [parameters, setParameters] = useState([])
@@ -27,6 +28,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Homepage setSearchValues={(data) => setSearchValues(data)} setTitle={(value) => setTitle(value)} />} />
           <Route path="/listag" element={<AgencyList title='Elenco agenzie' />} />
+          <Route path="/agency" element={<Agency />} />
           <Route path="/top-100" element={<List count={100} title='Elenco delle ultime 100 proprietà' />} />
           <Route path="/top-20" element={<List count={20} title='Elenco delle ultime 20 proprietà' />} />
           <Route path="/vendita-prima-fila-dal-mare" element={<List parameter={'tagList'} value={10} title='Prima fina dal mare' />} />
