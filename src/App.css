@@ -1111,6 +1111,35 @@ aside nav a:hover {
     ;
 }
 
+/* CARD AGENCY */
+
+.card-agency-title {
+    font-size: 1.6em !important;
+    font-weight: 700;
+    color: #444654;
+}
+
+.card-agency-info {
+    font-size: 1.2em !important;
+    font-weight: 200;
+    line-height: normal;
+    color: #444654;
+}
+
+.card-agency-info img {
+    width: 11px;
+    height: 12px;
+}
+
+.card-agency-text-blue {
+    /* font-size: 1.2em !important; */
+    font-weight: 300;
+    line-height: normal;
+    color: rgba(66, 133, 244);
+}
+
+
+
 /* ULTIMI REGISTRATI */
 
 .card-ultimi {
@@ -1132,6 +1161,12 @@ aside nav a:hover {
     object-fit: cover;
 }
 
+.image-card-agency {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 .image-container,
 .content-container {
     flex-basis: 100%;
@@ -1142,6 +1177,7 @@ aside nav a:hover {
         height: 240px;
     }
 
+
     .inner-card-ultimi {
         height: 100%;
     }
@@ -1150,12 +1186,26 @@ aside nav a:hover {
         height: 100%;
     }
 
+    .image-card-agency {
+        height: 100%;
+        border-top-left-radius: 7px;
+        border-bottom-left-radius: 7px;
+    }
+
     .image-container {
         flex: 0 0 45%;
     }
 
+    .image-container-agency {
+        flex: 0 0 30%
+    }
+
     .content-container {
         flex: 0 0 55%;
+    }
+
+    .content-container-agency {
+        flex: 0 0 70%;
     }
 
     .card-ultimi-button {
@@ -1188,6 +1238,13 @@ aside nav a:hover {
         border-top-left-radius: 7px;
         border-top-right-radius: 7px;
     }
+
+    .image-card-agency {
+        height: 240px;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+    }
+
 }
 
 .list-title {
@@ -1213,6 +1270,7 @@ aside nav a:hover {
     color: #444654;
 }
 
+
 .card-ultimi-price {
     font-size: 1em !important;
 }
@@ -1228,6 +1286,7 @@ aside nav a:hover {
     line-height: normal;
     color: #444654;
 }
+
 
 .card-ultimi-info img {
     width: 13px;
