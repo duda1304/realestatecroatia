@@ -1111,6 +1111,21 @@ aside nav a:hover {
     ;
 }
 
+/* CHECK MARK */
+.checkmark-container {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    pointer-events: none;
+}
+
+.checkmark {
+    width: 100%;
+    height: auto;
+}
+
 /* CARD AGENCY */
 
 .card-agency-title {
@@ -1171,6 +1186,53 @@ aside nav a:hover {
     object-fit: cover;
     border-radius: 7px;
 }
+
+/* AGENCY FIRST 5 LISTINGS */
+
+.agency-properties-id {
+    font-size: 1.5em !important;
+    font-weight: 300;
+    background-color: #E1EFFF;
+    color: #2B2E41;
+    border: none;
+}
+
+.agency-type-city {
+    font-size: 1.5em !important;
+    font-weight: 500;
+    color: #4285F4;
+    text-decoration: underline;
+}
+
+.agency-properties-price {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.agency-row-width {
+    width: 90%;
+}
+
+@media (max-width: 650px) {
+
+    .agency-properties-id {
+        font-size: 1.2em !important;
+    }
+
+    .agency-type-city {
+        font-size: 1.2em !important;
+    }
+
+    .agency-properties-price {
+        font-size: 1.2em !important;
+    }
+
+    .checkmark {
+        width: 3vh;
+        height: auto;
+    }
+}
+
 
 /* ULTIMI REGISTRATI */
 
