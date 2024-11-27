@@ -1213,23 +1213,35 @@ aside nav a:hover {
     width: 90%;
 }
 
+.agency-prop-type {
+    font-size: 1.2em !important;
+}
+
 @media (max-width: 650px) {
 
     .agency-properties-id {
-        font-size: 1.2em !important;
+        font-size: 1em !important;
     }
 
     .agency-type-city {
-        font-size: 1.2em !important;
+        font-size: 1em !important;
     }
 
     .agency-properties-price {
-        font-size: 1.2em !important;
+        font-size: 1em !important;
     }
 
     .checkmark {
-        width: 3vh;
+        width: 2vh;
         height: auto;
+    }
+
+    .agency-prop-type {
+        font-size: 0.5em !important;
+    }
+
+    .agency-info {
+        font-size: 1em !important;
     }
 }
 

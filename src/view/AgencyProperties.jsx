@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Loading from "../components/Loading";
 import CheckMark from '../components/CheckMark';
-
+import AgentCard from '../components/AgentCard';
 
 export default function AgencyProperties({ agencyId }) {
 	const [loading, setLoading] = useState(true);
@@ -57,8 +57,8 @@ export default function AgencyProperties({ agencyId }) {
 								{propertyType === 1 && <CheckMark />}
 								<div className="card-img-overlay d-flex align-items-end p-0">
 									<div className="w-100 text-white text-center py-2 rounded-bottom card-middle">
-										<span className="text-white stretched-link text-decoration-none fw-bolder">
-											Casa
+										<span className="text-white stretched-link text-decoration-none fw-bolder ">
+											<p className="agency-prop-type">Casa</p>
 										</span>
 									</div>
 								</div>
@@ -71,7 +71,7 @@ export default function AgencyProperties({ agencyId }) {
 								<div className="card-img-overlay d-flex align-items-end p-0">
 									<div className="w-100 text-white text-center py-2 rounded-bottom card-middle">
 										<span className="text-white stretched-link text-decoration-none fw-bolder">
-											Appartamento
+											<p className="agency-prop-type">Appartamento</p>
 										</span>
 									</div>
 								</div>
@@ -84,7 +84,7 @@ export default function AgencyProperties({ agencyId }) {
 								<div className="card-img-overlay d-flex align-items-end p-0">
 									<div className="w-100 text-white text-center py-2 rounded-bottom card-middle">
 										<span className="text-white stretched-link text-decoration-none fw-bolder">
-											Terreno
+											<p className="agency-prop-type">Terreno</p>
 										</span>
 									</div>
 								</div>
@@ -97,7 +97,7 @@ export default function AgencyProperties({ agencyId }) {
 								<div className="card-img-overlay d-flex align-items-end p-0">
 									<div className="w-100 text-white text-center py-2 rounded-bottom card-middle">
 										<span className="text-white stretched-link text-decoration-none fw-bolder">
-											Locale commerciale
+											<p className="agency-prop-type">Locale comm.</p>
 										</span>
 									</div>
 								</div>
@@ -106,7 +106,7 @@ export default function AgencyProperties({ agencyId }) {
 					</div>
 				}
 			</section>
-			<section id="agencyPropertiesList" className="d-flex flex-column align-items-center mt-5 card h-100 rounded border-0 shadow">
+			<section id="agencyPropertiesList" className="d-flex flex-column align-items-center mt-5 mb-5 card h-100 rounded border-0 shadow">
 				{loading && <Loading />}
 				{error && <p>Error loading properties</p>}
 				{!loading && !error && data.length > 0 && (
@@ -133,6 +133,8 @@ export default function AgencyProperties({ agencyId }) {
 					</div>
 				)}
 			</section>
+			<h2 className="h5 list-title mb-2">Agenti</h2>
+			<AgentCard />
 		</div >
 	);
 }
