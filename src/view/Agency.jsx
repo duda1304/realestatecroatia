@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import Loading from "../components/Loading";
+import AgencyProperties from "./AgencyProperties.jsx"
 
 const agencyInfo = {
+  "id": 14045,
   "name": "21.REAL ESTATE & TOURISM CENTURY d.o.o.",
   "contact": "Damir Prka",
   "address": "Marmontova, Split",
@@ -136,6 +138,7 @@ export default function Agency() {
           </div>
         </div>
       </section>
+      <AgencyProperties agencyId={data.id} />
     </main>
   );
 }
