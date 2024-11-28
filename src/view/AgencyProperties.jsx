@@ -37,7 +37,6 @@ export default function AgencyProperties({ agencyId }) {
 
 	useEffect(() => {
 		get();
-		console.log(`property type: ${propertyType}`);
 	}, [propertyType]);
 
 	const formatPrice = (price) => {
