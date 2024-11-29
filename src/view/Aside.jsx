@@ -16,7 +16,7 @@ export default function Aside(props) {
                 </h3>
                 <ul className="subMenu">
                     <li>
-                        <a href="/listag" className="link none">Elenco agenzie</a>
+                        <a className="link none" onClick={() => handleNavigation('/listag')}>Elenco agenzie</a>
                     </li>
                 </ul>
                 <h3 className="d-flex align-items-center">
