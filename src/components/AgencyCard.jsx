@@ -7,7 +7,7 @@ export default function AgencyCard(props) {
         {/* image */}
         <div className="image-container-agency">
           <img
-            src={props.imageUrl || "../../public/img/agency_placeholder.png"}
+            src={props.imageUrl || "./img/agency_placeholder.png"}
             className="img-fluid image-card-agency"
             alt="Agency"
           />
